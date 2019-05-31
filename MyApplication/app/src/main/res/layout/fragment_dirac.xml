@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ScrollView01"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:scrollbarSize="16.0dip"
+    android:scrollbarStyle="outsideInset">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingBottom="@dimen/activity_vertical_margin">
+
+        <Button
+            android:id="@+id/Load_button"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:onClick="LoadandUpdateAudioCalDB"
+            android:text="Load Audio Cal Database" />
+
+        <TextView
+            android:id="@+id/select_text_id"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/Load_button"
+            android:gravity="left"
+            android:text="Select audio configuration"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/DeviceTextView"
+            android:layout_width="70.0dip"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/select_text_id"
+            android:gravity="bottom"
+            android:text="Device" />
+
+        <Spinner
+            android:id="@+id/DeviceSpinner"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/select_text_id"
+            android:layout_toRightOf="@id/DeviceTextView" />
+
+        <TextView
+            android:id="@+id/AppTextView"
+            android:layout_width="70.0dip"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/DeviceSpinner"
+            android:gravity="bottom"
+            android:text="AppType" />
+
+        <Spinner
+            android:id="@+id/AppSpinner"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/DeviceSpinner"
+            android:layout_toRightOf="@id/AppTextView" />
+
+        <TextView
+            android:id="@+id/calTypeTextView"
+            android:layout_width="70.0dip"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/AppSpinner"
+            android:text="calType" />
+
+        <Spinner
+            android:id="@+id/calTypeSpinner"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/AppSpinner"
+            android:layout_toRightOf="@id/calTypeTextView"
+            android:entries="@array/cal_type_array" />
+
+        <TextView
+            android:id="@+id/SamplingTextView"
+            android:layout_width="70.0dip"
+            android:layout_height="50.0dip"
+            android:layout_below="@id/calTypeSpinner"
+            android:text="Sampling" />
+
+        <Spinner
+            android:id="@+id/SamplingSpinner"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/calTypeSpinner"
+            android:layout_toRightOf="@id/SamplingTextView" />
+
+        <TextView
+            android:id="@+id/TopoTextView"
+            android:layout_width="70.0dip"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/SamplingSpinner"
+            android:text="Topology" />
+
+        <Spinner
+            android:id="@+id/TopoSpinner_id"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/SamplingSpinner"
+            android:layout_toRightOf="@id/TopoTextView" />
+
+        <TextView
+            android:id="@+id/ModulesTextView"
+            android:layout_width="70.0dip"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/TopoSpinner_id"
+            android:text="Module" />
+
+        <Spinner
+            android:id="@+id/ModulesSpinner_id"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/TopoSpinner_id"
+            android:layout_toRightOf="@id/ModulesTextView" />
+
+        <TextView
+            android:id="@+id/ParamsTextView"
+            android:layout_width="70.0dip"
+            android:layout_height="50.0dip"
+            android:layout_below="@id/ModulesSpinner_id"
+            android:text="Params" />
+
+        <Spinner
+            android:id="@+id/ParamsSpinner_id"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ModulesSpinner_id"
+            android:layout_toRightOf="@id/ParamsTextView" />
+
+        <TextView
+            android:id="@+id/calibrate_text_id"
+            android:layout_width="100.0dip"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ParamsTextView"
+            android:gravity="left"
+            android:text="Persistant" />
+
+        <CheckBox
+            android:id="@+id/PersistCheck_id"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ParamsTextView"
+            android:layout_toRightOf="@id/calibrate_text_id"
+            android:checked="false"
+            android:onClick="onCheckBoxClicked" />
+
+        <Button
+            android:id="@+id/set_button_id"
+            android:layout_width="70.0dip"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/PersistCheck_id"
+            android:enabled="false"
+            android:onClick="setParam"
+            android:text="Set" />
+
+        <EditText
+            android:id="@+id/set_param_view_text"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/set_button_id"
+            android:focusableInTouchMode="false"
+            android:hint="param value"
+            android:imeOptions="actionDone"
+            android:singleLine="true"
+            android:windowSoftInputMode="stateHidden" />
+
+        <Button
+            android:id="@+id/get_button_id"
+            android:layout_width="70.0dip"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/set_param_view_text"
+            android:enabled="false"
+            android:onClick="getParam"
+            android:text="Get" />
+
+        <TextView
+            android:id="@+id/get_param_edit_text"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/get_button_id"
+            android:hint="param value" />
+    </RelativeLayout>
+</ScrollView>

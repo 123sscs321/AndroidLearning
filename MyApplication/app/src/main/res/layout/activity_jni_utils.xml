@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".jniutil.JniUtilsActivity">
+
+    <TextView
+        android:id="@+id/jni_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/app_jni_text"
+        app:layout_constraintTop_toBottomOf="@id/jni_button"
+        />
+
+    <Button
+        android:id="@+id/jni_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/app_jni_button"
+        android:onClick="cipJni"
+        android:clickable="true"
+        android:focusable="true"
+        />
+
+</android.support.constraint.ConstraintLayout>

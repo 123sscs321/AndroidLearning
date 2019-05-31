@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorBlack">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="50dp"
+        android:layout_marginStart="50dp">
+
+        <EditText
+            android:id="@+id/caculate_input1"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@color/colorWhite"/>
+
+        <TextView
+            android:id="@+id/caculate_operator"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:textColor="@color/colorWhite"/>
+
+        <EditText
+            android:id="@+id/caculate_input2"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@color/colorWhite"/>
+
+        <TextView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:text="="
+            android:textColor="@color/colorWhite"/>
+        <TextView
+            android:id="@+id/caculate_result"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:textColor="@color/colorWhite"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="50dp"
+        android:layout_marginStart="50dp">
+
+        <Button
+            android:id="@+id/caculate_button_add"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:text="+"/>
+        <Button
+            android:id="@+id/caculate_button_substract"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="20dp"
+            android:text="-"/>
+        <Button
+            android:id="@+id/caculate_button_mult"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="20dp"
+            android:text="*"/>
+        <Button
+            android:id="@+id/caculate_button_div"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="20dp"
+            android:text="/"/>
+    </LinearLayout>
+
+
+</LinearLayout>
